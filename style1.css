@@ -1,0 +1,204 @@
+/* Sur cette page se trouve les styles de l'ensemble du site Internet
+qui a été développé et mis en ligne par Rémi Verschuur*/
+
+/*Définition des variables*/
+:root{
+    --fond-clair:#ffffff;
+    --fond-vert-clair:#bffce0;
+    --fond-tete:#3C9770;
+    --texte-fonce:#1b4130;
+    --texte-moyen:#3C9770;
+    --texte-clair:#63ffbb;
+    --texte-lien:#A8BF4D;
+    --texte-soft:#323232;
+    --ombre:5px 5px 7px rgba(0,0,0,0.3);
+    --marge-large: 50px;
+    --marge-moyenne: 20px;
+    --marge-courte: 10px;
+    --largeur-encars-large: 500px;
+    --largeur-encars-petit: 250px;
+    --hauteur-encars-grand: 300px;
+    --hauteur-encars-petit: 150px;
+}
+/*bannière*/
+.bannière{
+    display:flex;
+    flex-direction: column;
+    align-items:last center;
+    justify-content: center;
+    height: 20vh;
+}
+    .bannière ul{
+        list-style: none;
+        display: flex; /*affichage des onglets en ligne*/
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+    }
+    .bannière a{
+        color: var(--texte-soft);
+        text-decoration: none;
+        transition: font-size 0.5s ease;
+    }
+        .bannière a.en-cours{
+            color: var(--fond-clair);
+            border-bottom: 4px solid var(--fond-clair);
+            padding: 0 20px 5px;
+            font-size:140%;
+        }
+        .bannière a.pas-en-cours{
+            color: var(--texte-lien);
+            background-color: var(--fond-tete);
+            font-size: 100%;
+        }
+        .bannière a:hover{/* style de survol*/
+            color:var(--fond-clair);
+            font-size: 140%;
+        }
+/* Titres */
+h1 {
+    color:var(--fond-clair);
+    font-size: xx-large;
+    font-style: initial;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: var(--ombre);
+}
+h2 {
+    color: var(--fond-tete);
+    text-align: center;
+    text-decoration: wavy;
+}
+/*Style de l'entête du site*/
+header{
+    background-color: var(--fond-tete);
+    color: var(--fond-clair);
+    align-content: center;
+    box-shadow: var(--ombre);
+    margin-left: var(--marge-moyenne);
+    margin-right: var(--marge-moyenne);
+    height: 20vh;
+}
+/*Corps de texte principal*/
+body {
+    background-color: var(--fond-clair);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: normal;
+    text-align: justify;
+    color: var(--texte-moyen);
+}
+/*Style principal*/
+main{
+    background-color: var(--fond-clair);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: normal;
+    text-align: justify;
+    color: var(--texte-moyen);
+    margin-top: var(--marge-moyenne);
+    margin-left: var(--marge-moyenne);
+    margin-right: var(--marge-moyenne);
+    margin-bottom: var(--marge-moyenne);
+    overflow-y: visible;
+}
+label {
+    display: inline-block;
+    clear: left;
+    width: 250px;
+    text-align: left; /* Change to 'right' if you want labels close to the inputs */
+}
+input {
+    display: inline-block;
+}
+[type="submit"]{
+    color: var(--fond-clair);
+    font-weight: 700;
+    padding: 10px;
+    border: 3px solid var(--texte-fonce);
+    border-radius: 8px;
+    background-color: var(--fond-tete);
+    margin: 10px;
+}
+/*Style du pied-de-page*/
+footer{
+    background-color: var(--fond-clair);
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: justify;
+    color: var(--texte-moyen);
+    margin-left: var(--marge-moyenne);
+    margin-right: var(--marge-moyenne);
+}
+/*Style de boutons*/
+button{
+    text-align: center;
+    background-color: var(--fond-tete);
+    padding: var(--marge-courte);
+    border: none;
+    box-shadow: var(--ombre);
+    color: var(--fond-clair);
+}
+li{
+    list-style-image: "puce.png";
+}
+.appui{
+    text-align: center;
+    font-size: 110%;
+    text-shadow: var(--ombre);
+}
+/*Mise en page générale*/
+.conteneur-general{
+    display: grid;
+    gap: 10px;
+    padding: 0 10%;
+}
+/*partie conteneur*/
+.conteneur-without-grid{
+    display: grid;
+    gap: 10px;
+    padding: 0 10%;
+}
+.conteneur-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:var(--marge-moyenne)
+}
+/*Conteneur avec images*/
+.conteneur-tiers{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+}
+    /*...image à gauche...*/
+    /*...image à droite...*/
+    .conteneur-gauche-tiers,
+    .conteneur-droite-tiers{
+        text-align: center;
+        flex: 33%; /*occupation du tiers de l'espace par élément*/
+        margin: 10px; /*Espace entre les éléments*/
+    }
+    .conteneur-gauche-deuxtiers,
+    .conteneur-droite-deuxtiers{
+        text-align: justify;
+        flex: 67%;
+        margin: 10px;
+    }
+/*partie encars*/
+.encadre-grid{
+    border: 2px solid var(--fond-tete);
+    box-shadow: var(--ombre);
+    padding: var(--marge-courte);
+    height: 200px;
+}
+@media (max-width: 600px){
+    .conteneur-tiers{
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap:var(--marge-courte);
+        height: 100%;
+        width: 100%;
+    }
+}

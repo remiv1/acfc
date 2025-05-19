@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <!--Titre de la page-->
+        <title>ACFC - Contactez-nous</title>
+        <!--Mise en page et propriétés-->
+        <link rel="stylesheet" href="style2.css">
+        <!--Mots-clé-->
+        <meta name="keywords" content="contact, affranchissement, pas cher, discount, cousance, timbres, poster, colis, recommandés">
+        <meta content="contact affranchissement ACFC">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div style="padding-left: 20px;">
+            <form action="/aucollectionneur-fc/includes/envoi.php" method="post">
+                <label for="nom">Nom & Prénom* :</label>
+                <input type="text" id="nom" name="nom" style="width: 30%;" required><br><br>
+            
+                <label for="email">E-mail* :</label>
+                <input type="email" id="email" name="email" style="width: 30%;" required><br><br>
+            
+                <label for="tel">Téléphone* :</label>
+                <input type="tel" id="tel" name="tel" style="width: 30%;" required><br><br>
+            
+                <label for="message">Message* :</label>
+                <textarea id="message" name="message" rows="10" style="width: 50%;" required></textarea><br><br>
+            
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </body>
+</html>

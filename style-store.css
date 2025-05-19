@@ -1,0 +1,175 @@
+/* Sur cette page se trouve les styles de l'ensemble du site Internet
+qui a été développé et mis en ligne par Rémi Verschuur*/
+
+/*Définition des variables*/
+:root{
+    --fond-clair:#ffffff;
+    --fond-vert-clair:#e0fbee;
+    --fond-tete:#3C9770;
+    --texte-fonce:#1b4130;
+    --texte-moyen:#3C9770;
+    --texte-clair:#63ffbb;
+    --texte-lien:#A8BF4D;
+    --texte-soft:#323232;
+    --ombre:5px 5px 7px rgba(0,0,0,0.3);
+    --marge-large: 50px;
+    --marge-moyenne: 20px;
+    --marge-courte: 10px;
+    --largeur-encars-large: 500px;
+    --largeur-encars-petit: 250px;
+    --hauteur-encars-grand: 300px;
+    --hauteur-encars-petit: 150px;
+}
+/* Titres */
+h2 {
+    color: var(--fond-tete);
+    text-align: center;
+    text-decoration: wavy;
+}
+/*Corps de texte principal*/
+body {
+    background-color: var(--fond-clair);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: normal;
+    text-align: justify;
+    color: var(--texte-moyen);
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+/*Style principal*/
+main{
+    background-color: var(--fond-clair);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: normal;
+    text-align: justify;
+    color: var(--texte-moyen);
+    margin-top: var(--marge-moyenne);
+    margin-left: var(--marge-moyenne);
+    margin-right: var(--marge-moyenne);
+    margin-bottom: var(--marge-moyenne);
+    overflow-y: visible;
+}
+/*Style de boutons*/
+button{
+    text-align: center;
+    background-color: var(--fond-tete);
+    padding: var(--marge-courte);
+    border: none;
+    box-shadow: var(--ombre);
+    color: var(--fond-clair);
+}
+/*tesxtes mis en evidence de type paragraphe*/
+.appui{
+    text-align: center;
+    font-size: 110%;
+    text-shadow: var(--ombre);
+}
+details {
+    position: fixed;
+    top: 0%;
+}
+    details h2{
+        list-style: none;
+        cursor: default;
+    }
+/*Mise en page générale*/
+.conteneur-general{
+    display: grid;
+    gap: var(--marge-courte);
+    padding: 0 2%;
+}
+.conteneur-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:var(--marge-courte);
+    height: 100%;
+    width: 100%;
+}
+/*Conteneur avec images*/
+.conteneur-tiers{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+}
+/*partie encars*/
+.encadre-grid{
+    border: 2px solid var(--fond-tete);
+    box-shadow: var(--ombre);
+    padding: 10%;
+}
+    .encadre-grid:hover{
+        transform: scale(1.02) scale(1.02);
+        transition: transform 1s ease-in;
+    }
+    .image-produit, img {
+        height: 125px;
+        overflow: hidden;
+        justify-items: center;
+        text-align: center;
+    }
+        .image-produit img{
+            height: 100%;
+        }
+    .texte-produit {
+        height: 50px;
+    }
+        .texte-produit p {
+            justify-content: center;
+            text-align: center;
+        }
+    .boutton-produit {
+        height: 25px;
+    }
+        .boutton-produit button {
+            margin-bottom: 20px;
+            justify-content: end;
+            text-align: center;
+            background-color: var(--fond-tete);
+            padding: var(--marge-courte);
+            border: none;
+            box-shadow: var(--ombre);
+            color: var(--fond-clair);
+        }
+        .boutton-produit button:hover {
+            transform:scale3d(1.1, 0.95, 1.5) ;
+            transition: transform 0.5s ease;
+        }
+.conteneur-flou{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+    .resp-iframe {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        min-width: 300px;
+        max-width: 100%;
+        width: 80%;
+        min-height: 300px;
+        max-height: 100%;
+        height: 80%;
+        overflow-y: visible;
+        background-color: var(--fond-vert-clair);
+        border: 2px solid var(--fond-tete);
+        box-shadow: var(--ombre);
+        padding: 20px;
+    }
+    #closePopup {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        border-radius: 8px;
+    }
+        #closePopup:hover{
+            transform: scale(1.02) scale(1.02);
+        }

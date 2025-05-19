@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="Fr">
+    <head>
+        <!--Titre de la page-->
+        <title>ACFC | Accueil</title>
+        <!--Mise en page et propriétés-->
+        <link rel="stylesheet" href="style2.css">
+        <link rel="shortcut icon" href="Images/Logo_Small.svg" type="image/x-icon">
+        <!--Mots clé-->
+        <meta 
+            name="keywords"
+            content="timbres, affranchissement, discount, la poste, poste, pas cher, timbre, colis, envoi, lettre, courrier">
+        <meta charset="UTF-8" >
+    </head>
+    <body>
+        <header>
+            <!--Bannière du site Internet-->
+            <div class="bannière">
+                <img src="Images/Logo.svg" alt="logo a c f c timbre avec les 4 lettres" class="myprd-image">
+                <h1>
+                    Au Collectionneur Franc-Comtois
+                </h1><br>
+            <!--Dans la bannière, intégration d'un menu en ligne-->
+                <ul>
+                    <li><a href="Accueil.html" target="mon-contenu" class="en-cours">Accueil</a></li>
+                    <li><a href="StoreFr.html" target="mon-contenu" class="">Magasin</a></li>
+                    <li><a href="ContactFr.html" target="mon-contenu" class="">Nous Contacter</a></li>
+                    <li><a href="AboutFr.html" target="mon-contenu" class="">A propos de nous</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <iframe src="Accueil.html" id="mon-contenu" name="mon-contenu"  class="resp-iframe"></iframe>
+        </main>
+        <div id="cookieBanner">
+            <p>Ce site utilise uniquement des cookies nécessaires au bon fonctionnement du site (panier d'achat, acceptation). Que vous acceptiez ou refusiez, seules les cookies nécessaires seront utilisés.</p>
+            <button onclick="acceptCookies()">Accepter</button>
+            <button onclick="refuserCookies()">Refuser</button>
+        </div>
+        <script>
+            window.onload = function() {
+            // Vérifiez si le cookie 'acceptCookies' existe
+            if (!document.cookie.split('; ').find(row => row.startsWith('acceptCookies')) || !document.cookie.split('; ').find(row.startsWith('refuserCookies'))) {
+                // Si non, montrez la bannière
+                document.getElementById('cookieBanner').style.bottom = '0';
+            }
+            };
+        </script>
+    <script src="class-script.js"></script>
+    <script src="Modal_Produits/modal.js"></script>
+    </body>
+</html>

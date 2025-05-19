@@ -1,0 +1,62 @@
+/* Sur cette page se trouve les styles de l'ensemble du site Internet
+qui a été développé et mis en ligne par Rémi Verschuur*/
+
+/*Définition des variables*/
+:root{
+    --fond-clair:#ffffff;
+    --fond-vert-clair:#bffce0;
+    --fond-tete:#3C9770;
+    --texte-fonce:#1b4130;
+    --texte-moyen:#3C9770;
+    --texte-clair:#63ffbb;
+    --texte-lien:#A8BF4D;
+    --texte-soft:#323232;
+    --ombre:5px 5px 7px rgba(0,0,0,0.3);
+    --marge-large: 50px;
+    --marge-moyenne: 20px;
+    --marge-courte: 10px;
+    --largeur-encars-large: 500px;
+    --largeur-encars-petit: 250px;
+    --hauteur-encars-grand: 300px;
+    --hauteur-encars-petit: 150px;
+}
+body{
+    overflow-y: scroll;
+    
+    margin-left: 10%;
+    margin-right: 12%;
+}
+/*Titre*/
+h2{
+    color: var(--texte-fonce);
+    font-weight: 700;
+}
+h3{
+    color: var(--texte-moyen);
+    font-style: italic;
+    font-weight: 500;
+}
+/* Corps sur la droite */
+    /* Blocs avec images et texte */
+    .bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px; /* Espacement entre les blocs */
+    }
+        .bloc img {
+        width: 30%;
+        text-align: center;
+        justify-content: center;
+        }
+        .bloc .texte {
+        width: 70%;
+        text-align: justify;
+        }
+        /* Alternance de l'image à gauche et à droite */
+        .bloc:nth-child(odd) .texte {
+        order: 2;
+        }
+        .bloc:nth-child(even) .texte {
+        order: -1;
+        }

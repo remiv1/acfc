@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style-modal.css">
+        <script src="modal.js" defer></script>
+    </head>
+    <body>
+        <div id="mod-col-simple-fr">
+            <div class="container-modal">
+                <div class="c-modal-gauche">
+                    <div class="title">
+                        <h2>Affranchissement colis simple en France</h2>
+                    </div>
+                    <div class="img-produit">
+                        <img src="../Images/col-simple-fr.jpg" alt="image d'un colis et d'une carte de France">
+                    </div>
+                    <div class="descriptif">
+                        <p>Pour tous vos envois de colis de 250g à 30kg. Les tarifs sont prévus pour des tailles standards.<br>
+                            L'affranchissement sera condtionné sur étiquettes et nous remplirons la page d'étiquettes, ainsi, 
+                            vous pourriez avoir quelques timbres de plus facturés.
+                        </p>
+                    </div>
+                </div>
+                <div class="c-modal-droite">
+                    <div class="choix">
+                        <form action="">
+                            <br><label for="poids">Poids</label><br>
+                            <select name="poids" id="poids" onchange="showQté()">
+                                <option value=""></option>
+                                <option value="250">250g</option>
+                                <option value="500">500g</option>
+                                <option value="750">750g</option>
+                                <option value="1000">1kg</option>
+                                <option value="2000">2kg</option>
+                                <option value="5000">5kg</option>
+                                <option value="10000">10kg</option>
+                                <option value="30000">30kg</option>
+                            </select><br>
+                            <br><label for="qté" id="lblQté">Quantité</label><br>
+                            <input type="number" name="qté" id="qté" oninput="okOk()">
+                        </form>
+                    </div><br>
+                    <button id="ok">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+        <script src="menus-colis-simples.js"></script>
+        <script>onOpen();</script>
+    </body>
+</html>

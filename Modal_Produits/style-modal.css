@@ -1,0 +1,146 @@
+/* Sur cette page se trouve les styles de l'ensemble du site Internet
+qui a été développé et mis en ligne par Rémi Verschuur*/
+
+/*Définition des variables*/
+:root{
+    --fond-clair:#ffffff;
+    --fond-vert-clair:#bffce0;
+    --fond-tete:#3C9770;
+    --texte-fonce:#1b4130;
+    --texte-moyen:#3C9770;
+    --texte-clair:#63ffbb;
+    --texte-lien:#A8BF4D;
+    --texte-soft:#323232;
+    --ombre:5px 5px 7px rgba(0,0,0,0.3);
+    --marge-large: 50px;
+    --marge-moyenne: 20px;
+    --marge-courte: 10px;
+    --largeur-encars-large: 500px;
+    --largeur-encars-petit: 250px;
+    --hauteur-encars-grand: 300px;
+    --hauteur-encars-petit: 150px;
+    --largeur1: 0 0 75%;
+    --largeur2: 0 0 25%;
+}
+/*croix de fermeture*/
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*Conteneur principal de la fenêtre modale*/
+.container-modal{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+    /*Eléments gauche sur x% de la surface*/
+    .c-modal-gauche{
+        text-align: justify;
+        flex: var(--largeur1);
+        margin: 10px;
+    }
+        /*Titre de la fenêtre*/
+        .title{
+            font-weight: 800;
+            text-align: center;
+            color: var(--fond-clair);
+            letter-spacing: 7px;
+            text-shadow: var(--ombre);
+            border: var(--fond-tete);
+            background-color: var(--fond-tete);
+            border-radius: 7px;
+        }
+        /*image du produit*/
+        .img-produit{
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            display: flex;
+        }
+            .img-produit img{
+                max-width: 200px;
+                max-height: 175px;
+            }
+        /*descriptif produit*/
+        .descriptif{
+            font-style: oblique;
+            text-align: justify;
+        }
+        .descriptif p{
+            text-indent: 15px;
+        }
+        .descriptif::first-letter{
+            font-size:xx-large;
+            float: left;
+            margin: 5px;
+            font-family:cursive;
+        }
+        /*Choix à réaliser par les clients*/
+    /*Eléments droite sur 20% de la surface*/
+    .c-modal-droite{
+        height: 100%;
+        flex: var(--largeur2);
+        margin: 5px;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        border: 1px solid var(--fond-tete);
+        border-radius: 3px;
+    }
+        .choix{
+            color: var(--texte-fonce);
+        }
+        .choix label{
+            text-align: center;
+            font-weight: bold;
+            background-color: var(--fond-tete);
+            background-size: 100% auto;
+            display: block;
+            width: 100%;
+            color: var(--fond-clair);
+        }
+        .choix select,
+        .choix input {
+            text-align: center;
+            border-radius: 3px;
+            border-color: var(--texte-soft);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            border-width: 2px;
+        }
+        .c-modal-droite button{
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: var(--fond-tete);
+            padding: var(--marge-courte);
+            border: none;
+            box-shadow: var(--ombre);
+            color: var(--fond-clair);
+        }
+            .c-modal-droite button:hover{
+                transform: scale(1.05) scale(1.05);
+                transition: transform 1s ease-in;
+            }
+            .c-modal-droite button:disabled {
+                background-color: grey;
+                color: whitesmoke;
+            }
+                .c-modal-droite button:disabled:hover{
+                    transform: scale(1) scale(1);
+                    transition: transform 0,5s ease;
+                }
+@media (max-width: 600px){
+    .container-modal {
+        flex-direction: column;
+    }
+    .c-modal-gauche, .c-modal-droite{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+<!-- HTML -->
+<div id="cookie-banner">
+    <p>Ce site utilise des cookies. Acceptez pour continuer.</p>
+    <button onclick="accepterCookies()">Accepter</button>
+    <button onclick="refuserCookies()">Refuser</button>
+</div>
+<script>
+    // JavaScript
+    function accepterCookies() {
+        // Activer les cookies et continuer
+        document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    function refuserCookies() {
+        // Bloquer l'accès au contenu
+        alert("Vous devez accepter les cookies pour continuer.");
+    }
+</script>
